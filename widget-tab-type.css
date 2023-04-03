@@ -6,6 +6,7 @@
 
 .tabs-widget {
     --tabs-height: 3em;
+    width: 100%;
 }
 
 .tabs-widget .tabs {
@@ -34,7 +35,9 @@
 
 .tabs-widget .tabs-content {
     padding: 0.25em 0.5em;
-    min-height: calc(100vh - var(--tabs-height));
+    height: calc(100vh - var(--tabs-height));
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .tabs-widget .tabs-content .tab-content {
