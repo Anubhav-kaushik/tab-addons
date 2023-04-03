@@ -1,0 +1,30 @@
+.widget-tab-type-1 .tab-heading-container,
+.widget-tab-type-1 .tab-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.widget-tab-type-1 .tab-heading-container .tab {
+    cursor: pointer;
+}
+
+.widget-tab-type-1 .tab-content-container {
+    position: relative;
+    height: 60vh;
+}
+
+.widget-tab-type-1 .tab-content-container .tab-content {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.widget-tab-type-1 .tab-content-container .tab-content[data-status="active"] {
+    opacity: 1;
+}
+
+.widget-tab-type-1 [data-status="active"] {
+    background-color: beige;
+}
