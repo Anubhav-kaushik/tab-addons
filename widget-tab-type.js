@@ -27,7 +27,7 @@ function createTab(tabname, num, tabsContainerSelector, tabsContentSelector) {
     } else {
         tab.dataset.status = 'inactive';
     }
-    
+
     tab.addEventListener('click', function(e) {
             showSelected(this, tabsContainerSelector, tabsContentSelector)
     })
@@ -76,4 +76,19 @@ function showSelected(tab, tabsContainerSelector, tabsContentSelector) {
     }
 
     activeTab.dataset.status = 'active';
+}
+
+function initialTabBlock() {
+    const widgetSection = document.createElement('section');
+    widgetSection.classList.add('tabs-widget');
+
+    const tabsBlock = document.createElement('section');
+    tabsBlock.classList.add('tabs');
+    widgetSection.append(tabsBlock);
+
+    const tabsContentBlock = document.createElement('section');
+    tabsContentBlock.classList.add('tabs-content');
+    widgetSection.append(tabsContentBlock);
+
+    return widgetSection;
 }
